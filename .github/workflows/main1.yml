@@ -16,8 +16,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - run: pip install vnstock pandas
-
+      - run: pip install vnstock_data pandas
       - run: python update_vnindex.py
 
       - run: |
