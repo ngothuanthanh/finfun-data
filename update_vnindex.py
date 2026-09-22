@@ -1,10 +1,10 @@
-from vnstock import Vnstock
+from vnstock import Market
 import json
 
-stock = Vnstock().stock(symbol="VNINDEX", source="VCI")
-quote = stock.quote.intraday_quote()
+mkt = Market()
 
-latest = quote.iloc[-1]
+df = mkt.index("VNINDEX").quote()
+latest = df.iloc[-1]
 
 data = {
     "VNINDEX": float(latest["price"]),
