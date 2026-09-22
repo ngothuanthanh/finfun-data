@@ -1,8 +1,7 @@
-from vnstock import Market
+from vnstock_data import Market
 import json
 
 mkt = Market()
-
 df = mkt.index("VNINDEX").quote()
 latest = df.iloc[-1]
 
